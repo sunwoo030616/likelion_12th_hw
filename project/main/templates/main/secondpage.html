@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LIKELION 12th Django Session</title>
+  <style>
+    a {
+      text-decoration: none;
+    }
+
+    .body-container {
+      background-color: #c7985b;
+      color: #ffffff;
+      margin: 20px;
+    }
+
+    .navbar-container {
+      display: flex;
+      align-items: center;
+      padding-left: 20px;
+      gap: 40px;
+      background-color: #663621;
+      font-size: 18px;
+    }
+
+    .navbar-link {
+      color: #b89f9f;
+      font-size: 30px;
+    }
+
+    .navbar-link:hover {
+      color: #989494;
+    }
+
+    .contents {
+      font-size: 50px;
+      margin: 20px;
+    }
+  </style>
+</head>
+
+<body class="body-container">
+  <div>
+    <nav class="navbar-container">
+      <!-- mainpage 링크 연결 -->
+      <a class="navbar-link" href="{% url 'firstpage' %}">DGU_likelion_12th</a> 
+      <!-- secondpage 링크 연결 -->
+      <a class="navbar-link" href="{% url 'secondpage' %}">Second Page</a>
+    </nav>
+
+    {% load static %}
+
+    <img src="{% static 'images/logo.png' %}" alt="logo" width="300px">
+    <div class="contents">This is Second Page</div>
+    <div class="contents">I Love Teddy Bear♥ </div>
+    
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+    {% extends 'base.html' %}
+
+    {% block content %}
+    <h1 class="contents">2024 멋쟁이사자처럼 12기</h1>
+    <div class="contents">Django MTV 내용정리</div>
+    <div class="footer-content">💡Django MTV 패턴이란?
+      <ul>
+        <p>1️⃣Request(URL)</p>
+        <p>2️⃣URL Conf(url, view 매핑)</p>
+        <p>3️⃣View:요청에 따른 적절한 로직 수행</p>
+        <p>4️⃣Model:데이터</p>
+        <p>5️⃣Template:보여지는 부분,인터페이스</p>
+        <p>6️⃣Response</p>
+      </ul>
+    </div>
+    <div class="footer-content">HTML 페이지
+      <ul>
+        <p>1️⃣mainpage 주세요! request(URL)</p>
+        <p>2️⃣urls.py</p>
+        <p>3️⃣views.py</p>
+        <p>4️⃣짠! mainpage.html response</p>        
+      </ul>
+    </div>
+    <div class="footer-content">템플릿(template) 언어
+      <ul>
+        <p>파이썬의 변수, 문법을 HTML에서 사용할 수 있도록 제공하는 직관적인 언어</p>
+        <li>변수➡&lbrace;&lbrace;변수명&rbrace;&rbrace; </li>
+        <li>변수의 속성➡&lbrace;&lbrace;변수명.속성명&rbrace;&rbrace; </li>
+        <li>list의 각 인덱스➡&lbrace;&lbrace;list.index&rbrace;&rbrace;</li>
+        <li>dict의 key값➡&lbrace;&lbrace;dict.key&rbrace;&rbrace; </li>       
+      </ul>
+      <ul>
+        <li>조건문 형태 &lbrace;% if %&rbrace; &lbrace;% else %&rbrace; &lbrace;% endif %&rbrace; </li>
+        <li>반복문 형태 &lbrace;% for num in nums %&rbrace; &lbrace;&lbrace; num &rbrace;&rbrace; &lbrace;% endfor %&rbrace; </li>
+        <li>템플릿 필터 &lbrace;&lbrace; 변수명|필터 &rbrace;&rbrace; </li>
+        <li>템플릿 주석 &lbrace;# 주석 #&rbrace; </li>
+      </ul>
+    </div>
+    <div class="footer-content">템플릿 상속, nav bar 분리
+      <ul>
+        <p>반복되는 코드 상속하기</p>
+        <li>project 폴더 내, templates 폴더 + base.html생성</li>
+        <li>&lbrace;%block content%&rbrace; : 재사용 가능한 블록 범위를 정의</li>
+        <li>&lbrace;%endblock%&rbrace; : 블록의 끝</li>
+        <li>&lbrace;%extends 'base.html%&rbrace; : 업데이트</li> 
+        <li>장고가 base.html의 경로를 찾을 수 있게 설정</li>     
+      </ul>
+    </div>
+    <div class="footer-content">Static
+      <ul>
+        <p>웹 페이지에서 사용되는 정적인 파일을 저장하는 디렉토리리</p>
+        <p>1️⃣project 폴더 안에 static 폴더 만들기</p>
+        <p>2️⃣static 폴더 안에 images, css 폴더 만들기</p>
+        <p>3️⃣css 폴더 내에 project.css 파일 만들기</p>
+        <li>생성한 폴더/파일에 내용 추가</li> 
+        <li>&lbrace; load static &rbrace;➡ HTML 파일에서 활용 </li> 
+        <li>경로 설정 settings.py </li>         
+      </ul>
+    </div>
+    {% endblock %}
+
