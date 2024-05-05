@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div>
+<h1>마이페이지에 오신 것을 환영합니다</h1>
+
+<h3>{{ user.profile.nickname }}님 안녕하세요</h3>
+<h3>당신의 나이는 {{ user.profile.age }}입니다</h3>
+<h3>당신의 학과는 {{ user.profile.department }}입니다</h3>
+</div>
+<div>
+    {% for post in posts %}
+    <div>
+        <hr/>
+        <h3>{{post.title}}</h3>
+        {{post.writer}} | {{post.weather}} | {{post.pub_date}}<br>
+        {{post.summary}}
+        <a href="{% url 'main:detail' post.id %}">자세히 보기</a>
+        <br>
+    </div>
+    {% endfor %}  
+</div>
+{% endblock %}
