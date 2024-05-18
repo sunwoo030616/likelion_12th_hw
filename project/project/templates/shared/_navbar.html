@@ -4,6 +4,8 @@
     <!-- secondpage 링크 연결 -->
     <a class="navbar-link" href="{% url 'main:secondpage' %}">Second Page</a>
 
+    <a class="navbar-link" href="{% url 'main:tag-list' %}">Tag</a>
+
     <div class="nav-right">
       {% if user.is_authenticated %}
       <ul class="nav-link-account">
