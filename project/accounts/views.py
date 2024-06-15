@@ -32,12 +32,8 @@ def signup(request):
                 username=request.POST['username'],
                 password=request.POST['password']
             )
-            age=request.POST['age']
-            nickname=request.POST['nickname']
-            department=request.POST['department']
 
-            profile = Profile(user=user, age=age, nickname=nickname, department=department)
-            profile.save()
+            
 
             auth.login(request, user)
             return redirect('/')
